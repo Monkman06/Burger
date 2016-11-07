@@ -1,19 +1,19 @@
-li {
-  background: #FAEBD7;
-  margin: 5px;
-  padding: 5px;
+body {
+  background-color: #E67E22;
 }
 
-.label {
-  font-weight: bold;
+h1 {
+  text-align: center;
 }
 
-.create-update-form {
-  background: aqua;
-  margin: 5px;
-  padding: 5px;
+.freshBurgers {
+  float: left;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.eatenBurgers {
+  float: right;
+}
+
+.addBurger {
+  text-align: center;
 }

@@ -3,11 +3,11 @@ Here is where you make the connection to the database and export and used by the
 */
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-	port: 3306,
+	port: 3000,
 	host: 'localhost',
 	user: 'root',
 	password: '',
-	database: 'cat_db'
+	database: 'burgers_db'
 });
 
 connection.connect(function (err) {
