@@ -12,15 +12,10 @@ var orm = {
 			cb(result);
 		});
 	},
-		// vals is an array of values that we want to save to cols
-		// cols are the columns we want to insert the values into
+		
 	create: function (table, cols, vals, cb) {
 		var queryString = 'INSERT INTO ' + table + '(';
-		//queryString = queryString + ' (';
 		queryString += cols.toString();
-		//queryString = queryString + ') ';
-		//queryString = queryString + 'VALUES (';
-		//queryString = queryString + printQuestionMarks(vals.length);
 		queryString += ') VALUES (?) ';
 		console.log(queryString);
 		connection.query(queryString, [vals], function (err, result) {
@@ -32,10 +27,6 @@ var orm = {
 		// an example of objColVals would be {name: panther, sleepy: true}
 	update: function (table, objColVals, condition, cb) {
 		var queryString = 'UPDATE ' + table + 'SET' + objColVals + 'WHERE' + condition;
-		//queryString = queryString + ' SET ';
-		//queryString = queryString + objToSql(objColVals);
-		//queryString = queryString + ' WHERE ';
-		//queryString = queryString + condition;
 		console.log(queryString);
 		console.log(objColVals);
 		connection.query(queryString, function (err, result) {
